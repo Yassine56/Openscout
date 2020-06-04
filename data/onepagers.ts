@@ -14,6 +14,9 @@ const foober: OnePagerData = {
   detailDescription:
     'Foober enables anyone to get to any location in under 5 minutes.',
   founders: [fooberCEO],
+  fundraisingStage: 'Pre-Seed',
+  fundraisingStageGoal: 4000000,
+  fundsRaisedInStage: 2000000,
 };
 
 const ppCEO: OnePagerPerson = {
