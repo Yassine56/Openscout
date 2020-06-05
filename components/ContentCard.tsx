@@ -1,11 +1,16 @@
-import { Box, Heading, Divider } from '@chakra-ui/core';
+import { Box, Heading, Skeleton } from '@chakra-ui/core';
 
 type ContentCardProps = {
   title?: string;
+  isLoading: boolean;
   children: any;
 };
 
-export const ContentCard = ({ title, children }: ContentCardProps) => {
+export const ContentCard = ({
+  title,
+  isLoading = false,
+  children,
+}: ContentCardProps) => {
   return (
     <Box d='flex' alignItems='center' justifyContent='center'>
       <Box
@@ -15,16 +20,30 @@ export const ContentCard = ({ title, children }: ContentCardProps) => {
         borderWidth='1px'
         borderColor='grey'
         rounded='lg'
-        p='10px'
+        p='0'
         margin='10px'
       >
         {title && (
-          <Heading as='h2' size='md' paddingBottom='0'>
-            {title}
-          </Heading>
+          <>
+            <Box>
+              <Heading as='h2' size='md' m='0' p='20px 10px 0'>
+                {title}
+              </Heading>
+            </Box>
+          </>
         )}
-        {children}
+        <Box p='10px'>{isLoading ? <LoadingSkeletons /> : children}</Box>
       </Box>
     </Box>
+  );
+};
+
+const LoadingSkeletons = () => {
+  return (
+    <>
+      <Skeleton h='15px' marginBottom='10px'></Skeleton>
+      <Skeleton h='15px' marginBottom='10px'></Skeleton>
+      <Skeleton h='20px'></Skeleton>{' '}
+    </>
   );
 };

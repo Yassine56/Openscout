@@ -4,16 +4,24 @@ export interface OnePagerPerson {
   description?: string;
 }
 
+export interface OnePagerPublicData {
+  companyName: string;
+  url: string;
+  industryTags: string[];
+  briefDescription: string;
+}
+
 export interface OnePagerData {
   companyName: string;
-  urlSlug: string;
+  url: string;
   industryTags: string[];
   briefDescription: string;
   detailDescription?: string;
-  pitchVideoLink?: string;
+  founders: OnePagerPerson[];
   fundraisingStage?: string;
   fundraisingStageGoal?: number;
   fundsRaisedInStage?: number;
-  founders?: OnePagerPerson[];
+  fundRaisingDetails?: string;
+  pitchVideoLink?: string;
   investors?: OnePagerPerson[];
 }

@@ -6,10 +6,8 @@ import '../styles/global.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <ThemeProvider theme={CUSTOM_THEME}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={CUSTOM_THEME}>
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }
