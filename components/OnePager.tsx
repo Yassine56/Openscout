@@ -11,11 +11,11 @@ import {
   Avatar,
 } from '@chakra-ui/core';
 
-import { ContentCard } from './ContentCard';
-import { Header } from './Header';
 import { OnePagerData, OnePagerPerson } from '../model/model';
 import { getOnePagerData } from '../data/dataService';
 import { EMPTY_ONE_PAGER } from '../data/onepagers';
+import { ContentCard } from './ContentCard';
+import { Header } from './Header';
 
 /** Renders a full one pager based on the onePagerUrl. */
 export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
@@ -24,9 +24,9 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
   );
   const [isLoading, setIsLoading]: [boolean, any] = React.useState(false);
 
+  // Load data on first render.
   React.useEffect(() => {
     setIsLoading(true);
-
     getOnePagerData(onePagerUrl).then((result) => {
       setOnePager(result);
       setIsLoading(false);
@@ -34,7 +34,7 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
   }, []);
 
   return (
-    <Box>
+    <Box bg='#f2f4f5'>
       <Head>
         <title>{isLoading ? onePagerUrl : onePagerData.companyName}</title>
         <link rel='icon' href='/favicon.png' />
@@ -106,7 +106,7 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
   );
 };
 
-/** Founder Component */
+/** Renders a Founder component. */
 const Founder = ({ person }: { person: OnePagerPerson }) => {
   return (
     <Flex align='center'>
@@ -134,10 +134,11 @@ const Founder = ({ person }: { person: OnePagerPerson }) => {
   );
 };
 
-/** Util OnePager Components */
+/** Util One Pager Components */
 const SubTitle = ({ children }) => (
   <Heading as='h2' size='md' marginRight='10px'>
     {children}
   </Heading>
 );
+
 const Content = ({ children }) => <Text fontSize='sm'>{children}</Text>;

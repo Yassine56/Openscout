@@ -7,11 +7,13 @@ import { Header } from './Header';
 import { getAllPublicOnePagerData } from '../data/dataService';
 import { OnePagerPublicData } from '../model/model';
 
+/** Renders the home component. */
 export const Home = () => {
   const [onePagers, setOnePagers]: [OnePagerPublicData[], any] = React.useState(
     []
   );
 
+  // Load data on first render
   React.useEffect(() => {
     getAllPublicOnePagerData().then((result) => {
       setOnePagers(result);

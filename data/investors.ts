@@ -11,9 +11,3 @@ const investor2: OnePagerPerson = {
   title: 'Analyst & Advisor',
   description: 'Analyst at Palm Tree Ventures. Providing guidance and...',
 };
-
-const investor3: OnePagerPerson = {
-  name: 'Kate Kuhn',
-  title: 'Analyst & Advisor',
-  description: 'Analyst at Palm Tree Ventures. Providing guidance and...',
-};

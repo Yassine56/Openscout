@@ -6,34 +6,34 @@ type ContentCardProps = {
   children: any;
 };
 
+/** Basic card for loading content */
 export const ContentCard = ({
   title,
   isLoading = false,
   children,
 }: ContentCardProps) => {
   return (
-    <Box d='flex' alignItems='center' justifyContent='center'>
-      <Box
-        flex='flex'
-        width='xl'
-        shadow='lg'
-        borderWidth='1px'
-        borderColor='grey'
-        rounded='lg'
-        p='0'
-        margin='10px'
-      >
-        {title && (
-          <>
-            <Box>
-              <Heading as='h2' size='md' m='0' p='20px 10px 0'>
-                {title}
-              </Heading>
-            </Box>
-          </>
-        )}
-        <Box p='10px'>{isLoading ? <LoadingSkeletons /> : children}</Box>
-      </Box>
+    <Box
+      flex='flex'
+      width='xl'
+      shadow='lg'
+      borderWidth='1px'
+      borderColor='grey'
+      rounded='lg'
+      p='0'
+      margin='20px auto'
+      bg='white'
+    >
+      {title && (
+        <>
+          <Box>
+            <Heading as='h2' size='md' m='0' p='20px 10px 0'>
+              {title}
+            </Heading>
+          </Box>
+        </>
+      )}
+      <Box p='10px'>{isLoading ? <LoadingSkeletons /> : children}</Box>
     </Box>
   );
 };

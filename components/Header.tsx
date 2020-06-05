@@ -1,5 +1,6 @@
 import { Box, Heading } from '@chakra-ui/core';
 
+/** Renders the header component. */
 export const Header = () => {
   const openScoutUrl = 'http://www.openscout.vc';
 

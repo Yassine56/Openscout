@@ -1,6 +1,7 @@
 import { OnePagerData, OnePagerPublicData } from '../model/model';
 import { facebook1, facebook2, facebook3 } from './founders';
 
+/** An empty one pager, for initial React state */
 export const EMPTY_ONE_PAGER: OnePagerData = {
   companyName: '',
   url: '',
@@ -25,10 +26,12 @@ const facebook: OnePagerData = {
   pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
 };
 
+/** Map of urls to full one pager data. */
 export const ONE_PAGERS_ALL_DATA_MAP: Map<string, OnePagerData> = new Map([
   [facebook.url, facebook],
 ]);
 
+/** Array of all public one pager data. */
 export const ONE_PAGERS_PUBLIC_DATA_ARRAY: OnePagerPublicData[] = Array.from(
   ONE_PAGERS_ALL_DATA_MAP.values()
 ).map((onePager: OnePagerData) => {

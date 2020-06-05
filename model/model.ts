@@ -1,9 +1,11 @@
+/** A person related to a one pager. */
 export interface OnePagerPerson {
   name: string;
   title: string;
   description?: string;
 }
 
+/** Public access one pager data fields. */
 export interface OnePagerPublicData {
   companyName: string;
   url: string;
@@ -11,6 +13,7 @@ export interface OnePagerPublicData {
   briefDescription: string;
 }
 
+/** Full one pager data model. */
 export interface OnePagerData {
   companyName: string;
   url: string;
