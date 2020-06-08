@@ -13,7 +13,7 @@ export const Home = () => {
     []
   );
 
-  // Load data on first render
+  // React hook to load data on first render
   React.useEffect(() => {
     getAllPublicOnePagerData().then((result) => {
       setOnePagers(result);

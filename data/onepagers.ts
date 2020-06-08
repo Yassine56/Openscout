@@ -21,7 +21,7 @@ const facebook: OnePagerData = {
   fundraisingStage: 'Seed',
   fundraisingStageGoal: 500000,
   fundsRaisedInStage: 100000,
-  fundRaisingDetails: 'To transform from a school network to a public website',
+  fundraisingDetails: 'To transform from a school network to a public website',
   founders: [facebook1, facebook2, facebook3],
   pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
 };

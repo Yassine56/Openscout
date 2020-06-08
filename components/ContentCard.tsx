@@ -6,7 +6,10 @@ type ContentCardProps = {
   children: any;
 };
 
-/** Basic card for loading content */
+/**
+ * Renders basic card for displaying content.
+ * Display skeltons if isLoading.
+ * */
 export const ContentCard = ({
   title,
   isLoading = false,
@@ -38,6 +41,7 @@ export const ContentCard = ({
   );
 };
 
+/** Renders loading skeletons. */
 const LoadingSkeletons = () => {
   return (
     <>

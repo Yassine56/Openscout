@@ -1,21 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  Box,
-  Flex,
-  Divider,
-  Badge,
-  Heading,
-  Text,
-  Avatar,
-} from '@chakra-ui/core';
+import { Box, Flex, Divider } from '@chakra-ui/core';
 
-import { OnePagerData, OnePagerPerson } from '../model/model';
+import { OnePagerData } from '../model/model';
 import { getOnePagerData } from '../data/dataService';
 import { EMPTY_ONE_PAGER } from '../data/onepagers';
 import { ContentCard } from './ContentCard';
 import { Header } from './Header';
+import { OnePagerOverview } from './OnePagerOverview';
+import { OnePagerFounders } from './OnePagerFounders';
+import { OnePagerFinances } from './OnePagerFinances';
+import { OnePagerVideo } from './OnePagerVideo';
 
 /** Renders a full one pager based on the onePagerUrl. */
 export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
@@ -42,103 +38,32 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
 
       <Header />
 
-      <ContentCard title='Overview' isLoading={isLoading}>
-        <Heading as='h1' size='lg' marginRight='10px'>
-          {onePagerData.companyName}
-        </Heading>
-        <Heading as='h2' size='sm' color='grey' fontStyle='italic'>
-          {onePagerData.briefDescription}
-        </Heading>
-        <Flex>
-          {onePagerData.industryTags.map((tag: string) => {
-            return (
-              <Badge
-                key={tag}
-                rounded='full'
-                px='2'
-                variantColor='blue'
-                marginRight='10px'
-              >
-                {tag}
-              </Badge>
-            );
-          })}
-        </Flex>
-        <Content>{onePagerData.detailDescription}</Content>
-      </ContentCard>
+      <OnePagerOverview onePagerData={onePagerData} isLoading={isLoading} />
 
-      <Divider width='50%' />
+      <Diveder50 />
 
-      <ContentCard title='Founders' isLoading={isLoading}>
-        {onePagerData.founders.map((person: OnePagerPerson) => (
-          <Founder key={person.name} person={person}></Founder>
-        ))}
-      </ContentCard>
+      <OnePagerFounders onePagerData={onePagerData} isLoading={isLoading} />
 
-      <Divider width='50%' />
+      <Diveder50 />
 
-      <ContentCard title='Finances' isLoading={isLoading}>
-        <Heading as='h1' size='lg' marginRight='10px'>
-          Funding Stage: {onePagerData.fundraisingStage}
-        </Heading>
-        <SubTitle>Funds Raised: {onePagerData.fundsRaisedInStage}</SubTitle>
-        <SubTitle>Funding Goal: {onePagerData.fundraisingStageGoal}</SubTitle>
-      </ContentCard>
+      <OnePagerFinances onePagerData={onePagerData} isLoading={isLoading} />
 
-      <Divider width='50%' />
+      <Diveder50 />
 
-      <ContentCard title='Pitch Video' isLoading={isLoading}>
-        <SubTitle>
-          <a href={onePagerData.pitchVideoLink}>Link to Pitch Video</a>
-        </SubTitle>
-      </ContentCard>
+      <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
 
-      <Divider width='50%' />
+      <Diveder50 />
 
-      <ContentCard isLoading={isLoading}>
+      <ContentCard isLoading={false}>
         <Flex justifyContent='center'>
           <Link href='/'>
             <a>← Back to home</a>
           </Link>
         </Flex>
       </ContentCard>
+      <Box h='20'></Box>
     </Box>
   );
 };
 
-/** Renders a Founder component. */
-const Founder = ({ person }: { person: OnePagerPerson }) => {
-  return (
-    <Flex align='center'>
-      <Avatar marginRight='10px'></Avatar>
-      <Box>
-        <Box key={person.name} d='inline-flex' alignItems='baseline'>
-          <Heading as='h2' size='md' marginRight='10px' marginBottom='0'>
-            {person.name}
-          </Heading>
-          <Heading
-            as='h2'
-            size='sm'
-            marginRight='10px'
-            marginBottom='0'
-            fontStyle='emphasis'
-          >
-            {person.title}
-          </Heading>
-        </Box>
-        <Text fontSize='sm' marginTop='5px'>
-          {person.description}
-        </Text>
-      </Box>
-    </Flex>
-  );
-};
-
-/** Util One Pager Components */
-const SubTitle = ({ children }) => (
-  <Heading as='h2' size='md' marginRight='10px'>
-    {children}
-  </Heading>
-);
-
-const Content = ({ children }) => <Text fontSize='sm'>{children}</Text>;
+const Diveder50 = () => <Divider width='50%' />;

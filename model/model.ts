@@ -24,7 +24,7 @@ export interface OnePagerData {
   fundraisingStage?: string;
   fundraisingStageGoal?: number;
   fundsRaisedInStage?: number;
-  fundRaisingDetails?: string;
+  fundraisingDetails?: string;
   pitchVideoLink?: string;
   investors?: OnePagerPerson[];
 }
