@@ -11,19 +11,21 @@ export const EMPTY_ONE_PAGER: OnePagerData = {
   founders: [],
 };
 
-const spotify: OnePagerData = {
-  companyName: 'Spotify',
-  url: 'spotify',
-  industryTags: ['music', 'streaming'],
-  briefDescription: 'Ad-financed music streaming service	',
+const facebook: OnePagerData = {
+  companyName: 'Facebook',
+  url: 'facebook',
+  industryTags: ['Social Media', 'Messaging', 'Mobile'],
+  briefDescription:
+    'Online social networking platform for users to connect with friends and family',
   detailDescription:
-    'Commercial streaming service that provides digital content from a wide range of artists. Users can search music, create, share playlists, and integrate social media accounts. Can be access on computers or mobile devices.',
-  fundraisingStage: 'Series A',
-  fundraisingStageGoal: 21600000,
-  fundsRaisedInStage: 500000,
-  fundraisingDetails: 'Grow music library and licenses, developers salaries',
-  founders: [founders.spotify1, founders.spotify2],
-  investors: [investors.investor1],
+    'Users can create a profile, share images and other media, send and accept friend requests. Largest social media with more than 2B users worldwide',
+  fundraisingStage: 'Seed',
+  fundraisingStageGoal: 500000,
+  fundsRaisedInStage: 100000,
+  fundraisingDetails: 'To transform from a school network to a public website',
+  founders: [founders.facebook1, founders.facebook2, founders.facebook3],
+  pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
+  investors: [investors.investor2],
 };
 
 const lendingClub: OnePagerData = {
@@ -41,21 +43,20 @@ const lendingClub: OnePagerData = {
   investors: [investors.investor1],
 };
 
-const facebook: OnePagerData = {
-  companyName: 'Facebook',
-  url: 'facebook',
-  industryTags: ['Social Media', 'Messaging', 'Mobile'],
-  briefDescription:
-    'Online social networking platform for users to connect with friends and family',
+const spotify: OnePagerData = {
+  companyName: 'Spotify',
+  url: 'spotify',
+  industryTags: ['music', 'streaming'],
+  briefDescription: 'Ad-financed music streaming service	',
   detailDescription:
-    'Users can create a profile, share images and other media, send and accept friend requests. Largest social media with more than 2B users worldwide',
-  fundraisingStage: 'Seed',
-  fundraisingStageGoal: 500000,
-  fundsRaisedInStage: 100000,
-  fundraisingDetails: 'To transform from a school network to a public website',
-  founders: [founders.facebook1, founders.facebook2, founders.facebook3],
-  pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
-  investors: [investors.investor2],
+    'Commercial streaming service that provides digital content from a wide range of artists. Users can search music, create, share playlists, and integrate social media accounts. Can be access on computers or mobile devices.',
+  fundraisingStage: 'Series A',
+  fundraisingStageGoal: 21600000,
+  fundsRaisedInStage: 500000,
+  fundraisingDetails: 'Grow music library and licenses, developers salaries',
+  founders: [founders.spotify1, founders.spotify2],
+  pitchVideoLink: 'https://www.youtube.com/watch?v=ZDXETBfXSuc&t=166s',
+  investors: [investors.investor1],
 };
 
 const workday: OnePagerData = {
@@ -91,9 +92,9 @@ const zynga: OnePagerData = {
 
 /** Map of urls to full one pager data. */
 export const ONE_PAGERS_ALL_DATA_MAP: Map<string, OnePagerData> = new Map([
-  [spotify.url, spotify],
-  [lendingClub.url, lendingClub],
   [facebook.url, facebook],
+  [lendingClub.url, lendingClub],
+  [spotify.url, spotify],
   [workday.url, workday],
   [zynga.url, zynga],
 ]);
