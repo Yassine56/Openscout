@@ -1,3 +1,13 @@
+## One Pager Alpha Assignment.
+
+Hello! Welcome to the OnePager Alpha assignment. This repository was built using next.js and React.
+
+For additional information relating to this assignment see the assignment [Google Doc](https://docs.google.com/document/d/1gw-_v70LVAJf3wFAl0kjq6HXsDgMQuQXf2AVmKlKUoU/edit?usp=sharing).
+
+All other notes in this readme were generated automatically via next.js.
+
+## Nextjs
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
