@@ -16,7 +16,9 @@ export const OnePagerVideo = ({
   return (
     <ContentCard title='Pitch Video' isLoading={isLoading}>
       <Heading as='h2' size='md' marginRight='10px'>
-        <a href={onePagerData.pitchVideoLink}>Link to Pitch Video</a>
+        <a href={onePagerData.pitchVideoLink} target='_blank'>
+          Link to Pitch Video
+        </a>
       </Heading>
     </ContentCard>
   );
