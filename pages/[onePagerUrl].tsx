@@ -1,5 +1,5 @@
 import { ONE_PAGERS_PUBLIC_DATA_ARRAY } from '../data/onepagers';
-import { OnePager } from '../components/onePager';
+import { OnePager } from '../components/OnePager';
 import { OnePagerPublicData } from '../model/model';
 
 type OnePagerPageData = {
