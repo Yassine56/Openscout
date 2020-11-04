@@ -1,8 +1,8 @@
 ## One Pager Alpha Assignment.
 
-Hello! Welcome to the OnePager Alpha assignment. This repository was built using next.js and React.
+Hello! Welcome to the OnePager Alpha assignment. This repository was built using next.js and React. We're excited to that you're interested in contributing to the Open Scout community!
 
-For additional information relating to this assignment see the assignment [Google Doc](https://docs.google.com/document/d/1gw-_v70LVAJf3wFAl0kjq6HXsDgMQuQXf2AVmKlKUoU/edit?usp=sharing).
+For additional information relating to this assignment see document shared with you by an Open Scout team member.
 
 All other notes in this readme were generated automatically via next.js.
 
