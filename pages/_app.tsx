@@ -1,12 +1,14 @@
-import { AppProps } from 'next/app';
-import { ThemeProvider } from '@chakra-ui/core';
-
-import '../styles/global.scss';
+import { AppProps } from 'next/app'
+import { ThemeProvider } from '@chakra-ui/core'
+import { RecoilRoot } from 'recoil'
+import '../styles/global.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <ThemeProvider>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider>
+			<RecoilRoot>
+				<Component {...pageProps} />
+			</RecoilRoot>
+		</ThemeProvider>
+	)
 }

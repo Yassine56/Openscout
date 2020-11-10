@@ -11,11 +11,18 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.11.0",
+    "@types/recoil": "0.0.1",
+    "@types/stripe": "^7.13.25",
     "emotion-theming": "^10.0.27",
     "next": "9.4.4",
+    "query-string": "^6.13.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "sass": "^1.26.7"
+    "recoil": "^0.1.2",
+    "sass": "^1.26.7",
+    "stripe": "^8.121.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.9",
